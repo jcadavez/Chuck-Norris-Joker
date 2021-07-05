@@ -9,6 +9,7 @@ import {
 import { Navbar } from './app/Navbar';
 
 import { JokesList } from './features/jokes/JokesList';
+import { AddJokeForm } from './features/jokes/AddJokeForm';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             path="/"
             render={() => (
               <React.Fragment>
+                <AddJokeForm />
                 <JokesList />
               </React.Fragment>
             )}
