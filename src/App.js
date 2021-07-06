@@ -10,6 +10,7 @@ import { Navbar } from './app/Navbar';
 
 import { JokesList } from './features/jokes/JokesList';
 import { AddJokeForm } from './features/jokes/AddJokeForm';
+import { SingleJokePage } from './features/jokes/SingleJokePage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               </React.Fragment>
             )}
           />
+          <Route exact path="/jokes/:jokeId" component={SingleJokePage} />
           <Redirect to="/" />
         </Switch>
       </div>

@@ -23,6 +23,6 @@ const jokesSlice = createSlice({
     }
 })
 
-export const { jokeAdded } = jokesSlice.actions
+export const { jokeAdded, jokeUpdated } = jokesSlice.actions
 
 export default jokesSlice.reducer
