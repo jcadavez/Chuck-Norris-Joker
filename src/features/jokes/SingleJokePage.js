@@ -1,13 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { selectJokeById } from './jokesSlice'
 
 export const SingleJokePage = ({ match }) => {
     const { jokeId } = match.params
 
-    const joke = useSelector(state => 
-        state.jokes.find(joke => joke.id === jokeId)
-    )
+    const joke = useSelector(state => selectJokeById(state, jokeId))
 
     if (!joke) {
         return (

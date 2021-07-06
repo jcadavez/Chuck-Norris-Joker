@@ -15,13 +15,7 @@ export const AddJokeForm = () => {
 
     const onSaveJokeClicked = () => {
         if (value && url) {
-            dispatch(
-                jokeAdded({
-                    id: nanoid(),
-                    value,
-                    url
-                })
-            )
+            dispatch(jokeAdded({ value, url }))
         }
 
         setValue('')
