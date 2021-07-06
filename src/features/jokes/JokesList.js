@@ -7,6 +7,7 @@ export const JokesList = () => {
     const renderedJokes = jokes.map(joke => (
         <article className="joke-excerpt" key={joke.id}>
             <h3>{joke.value}</h3>
+            <p className="joke-content">{joke.url}</p>
         </article>
     ))
 

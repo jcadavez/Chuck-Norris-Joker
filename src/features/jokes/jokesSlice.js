@@ -16,7 +16,13 @@ const initialState = [
 const jokesSlice = createSlice({
     name: 'jokes',
     initialState,
-    reducers: {}
+    reducers: {
+        jokeAdded(state, action) {
+            state.push(action.payload)
+        }
+    }
 })
+
+export const { jokeAdded } = jokesSlice.actions
 
 export default jokesSlice.reducer
