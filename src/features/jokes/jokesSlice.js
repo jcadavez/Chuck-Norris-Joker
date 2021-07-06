@@ -19,6 +19,14 @@ const jokesSlice = createSlice({
     reducers: {
         jokeAdded(state, action) {
             state.push(action.payload)
+        },
+        jokeUpdated(state, action) {
+            const { id, value, url } = action.payload 
+            const existingJoke = state.find(joke => joke.id === id)
+            if (existingJoke) {
+                existingJoke.value = value;
+                existingJoke.url = url;
+            }
         }
     }
 })

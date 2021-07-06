@@ -11,6 +11,7 @@ import { Navbar } from './app/Navbar';
 import { JokesList } from './features/jokes/JokesList';
 import { AddJokeForm } from './features/jokes/AddJokeForm';
 import { SingleJokePage } from './features/jokes/SingleJokePage';
+import { EditJokeForm } from './features/jokes/EditJokeForm';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             )}
           />
           <Route exact path="/jokes/:jokeId" component={SingleJokePage} />
+          <Route exact path="/editJoke/:jokeId" component={EditJokeForm} />
           <Redirect to="/" />
         </Switch>
       </div>
