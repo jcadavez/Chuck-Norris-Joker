@@ -105,6 +105,16 @@ section h1 {
   font-size: 3rem;
 }
 
+section form button,
+section form div {
+  font-size: 2rem;
+}
+
+section form div textarea {
+  height: 50px;
+  width: 50%;
+}
+
 /* Jokes List */
 
 .joke h2 {
