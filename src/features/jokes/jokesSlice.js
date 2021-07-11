@@ -1,20 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = [
-    {
-        id: '1',
-        value: 'Chocolate rainbows love Chuck norris',
-        url: 'https://www.google.com/chocolate'
+const initialState = {
+    joke: {
+        value: 'Chocolate muffins',
+        url: 'www.google.com/vanilla'
     },
-    {
-        id: '2',
-        value: 'Vanilla muffins',
-        url: 'https://www.google.com/vanilla'
-    }
-]
+    status: 'idle',
+    error: null
+}
 
 const jokesSlice = createSlice({
-    name: 'jokes',
+    name: 'app',
     initialState,
     reducers: {}
 })

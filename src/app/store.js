@@ -4,6 +4,6 @@ import jokesReducer from '../features/jokes/jokesSlice'
 
 export default configureStore({
     reducer: {
-        jokes: jokesReducer
+        app: jokesReducer
     }
 })
