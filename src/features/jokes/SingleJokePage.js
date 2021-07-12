@@ -27,7 +27,11 @@ export const SingleJokePage = () => {
                     src={joke.icon_url}
                     alt="Chuck Norris Pic"
                 />
-                <p className="joke-url">{joke.url}</p>
+                <br />
+                <div>
+                    <a href={joke.url} className="joke-url">Click here to see Joke source</a>
+                </div>
+                <br />
             </article>
         )
     }
