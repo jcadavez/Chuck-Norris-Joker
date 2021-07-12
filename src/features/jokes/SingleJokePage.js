@@ -23,6 +23,10 @@ export const SingleJokePage = () => {
         content = (
             <article className="joke">
                 <h2>{joke.value}</h2>
+                <img
+                    src={joke.icon_url}
+                    alt="Chuck Norris Pic"
+                />
                 <p className="joke-url">{joke.url}</p>
             </article>
         )
