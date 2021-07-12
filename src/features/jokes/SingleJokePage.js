@@ -6,25 +6,31 @@ import { fetchJoke } from './jokesSlice'
 export const SingleJokePage = () => {
     const dispatch = useDispatch()
     const joke = useSelector(state => state.app.joke)
+    const jokeStatus = useSelector(state => state.app.status)
 
     const onGetJokeClicked = () => {
         dispatch(fetchJoke())
     }
 
-    if (!joke) {
-        return (
-            <section>
-                <h2>Error finding joke!</h2>
-            </section>
+    let content; 
+    if (jokeStatus === 'failed') {
+        content = (
+            <article>
+                <h2>Error getting joke!</h2>
+            </article>
+        )
+    } else {
+        content = (
+            <article className="joke">
+                <h2>{joke.value}</h2>
+                <p className="joke-url">{joke.url}</p>
+            </article>
         )
     }
 
     return (
         <section>
-            <article className="joke">
-                <h2>{joke.value}</h2>
-                <p className="joke-url">{joke.url}</p>
-            </article>
+            {content}
             <button type="button" onClick={onGetJokeClicked}>
                 Get a Chuck Norris Joke
             </button>

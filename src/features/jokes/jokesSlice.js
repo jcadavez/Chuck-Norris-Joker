@@ -2,8 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     joke: {
-        value: 'Chocolate muffins',
-        url: 'www.google.com/vanilla'
+        value: 'This is the initial state',
+        url: 'https://www.google.com/vanilla'
     },
     status: 'idle',
     error: null
@@ -28,6 +28,7 @@ const jokesSlice = createSlice({
             state.status = 'succeeded'
             const { value, url } = action.payload;
             state.joke = { value: value, url: url};
+            state.error = null
         },
         [fetchJoke.rejected]: (state, action) => {
             state.status = 'failed'
